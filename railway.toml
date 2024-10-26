@@ -1,0 +1,14 @@
+[build]
+builder = "nixpacks"
+buildCommand = "npm install"
+
+[deploy]
+startCommand = "npm run server"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 100
+restartPolicyType = "on-failure"
+restartPolicyMaxRetries = 3
+
+[mount]
+source = "/data"
+destination = "/app/data"
