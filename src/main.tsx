@@ -13,4 +13,4 @@ createRoot(rootElement).render(
       <App />
     </HelmetProvider>
   </StrictMode>
-);
+);</content>

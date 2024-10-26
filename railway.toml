@@ -3,12 +3,12 @@ builder = "nixpacks"
 buildCommand = "npm install"
 
 [deploy]
-startCommand = "npm run server"
-healthcheckPath = "/api/health"
+startCommand = "node src/server.js"
+healthcheckPath = "/health"
 healthcheckTimeout = 100
-restartPolicyType = "on-failure"
-restartPolicyMaxRetries = 3
+restartPolicy = "on-failure"
+numReplicas = 1
 
 [mount]
 source = "/data"
-destination = "/app/data"
+destination = "/data"</content>
